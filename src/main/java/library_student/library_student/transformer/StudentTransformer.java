@@ -16,7 +16,6 @@ public class StudentTransformer {
     public static StudentResponse ModelToResponse(Student student){
         return StudentResponse.builder()
                 .name(student.getName())
-                .message("Details added successfully")
                 .build();
     }
 }

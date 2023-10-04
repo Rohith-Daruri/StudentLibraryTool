@@ -4,10 +4,8 @@ import jakarta.persistence.*;
 import library_student.library_student.Enum.Genre;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -28,6 +26,7 @@ public class Book {
     @ManyToOne
     @JoinColumn
     Author author;
+    boolean  issued;
     @OneToMany(mappedBy = "book",cascade = CascadeType.ALL)
     List<Transaction> transaction_list = new ArrayList<>();
 }

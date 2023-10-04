@@ -17,7 +17,6 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     int regNo;
     String name;
-    @Column(unique = true,nullable = false)
     String email;
     @Enumerated(EnumType.STRING)
     Gender gender;
